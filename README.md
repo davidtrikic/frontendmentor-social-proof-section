@@ -43,7 +43,7 @@ Users should be able to:
 
 ### What I learned
 
-Using different sets of multiple background images on different screen sizes
+Usage of different sets of multiple background images on different screen sizes
 
 ### Continued development
 
