@@ -17,10 +17,15 @@ body {
   background-position: top left, bottom right;
   background-repeat: no-repeat;
 }
+.wrapper {
+  max-width: 1160px; /* Fixed max width by design */
+  padding: 0 1.66666em;
+  margin: 4em auto;
+}
 
 /****** TYPOGRAPHY AND LAYOUT ******/
 
-/* HERO SECTION */
+/*** HERO SECTION ***/
 
 h1 {
   font-size: 2em;
@@ -39,11 +44,6 @@ h4 {
   margin-top: .3em;
   color: var(--clr-primary-soft-pink);
 }
-.wrapper {
-  max-width: 1160px;
-  padding: 0 1.66666em;
-  margin: 4em auto;
-}
 .hero {
   display: flex;
   flex-direction: column;
@@ -57,6 +57,9 @@ h4 {
   line-height: 1.65;
   color: var(--clr-neutral-dark-grayish-magenta);
 }
+
+/* RATING BARS */
+
 .hero-ratings {
   padding-top: 2.85em;
 }
@@ -76,7 +79,7 @@ h4 {
   margin: 0 .1em;
 }
 
-/* BUYERS SECTION */
+/*** BUYERS SECTION ***/
 
 .buyers {
   min-height: 300px;
@@ -108,12 +111,12 @@ h4 {
   color: var(--clr-neutral-white);
 }
 
-/* FOOTER */
+/*** FOOTER ***/
 
 .attribution {
     font-size: 11px;
     text-align: center;
-  }
+}
   .attribution a {
     color: hsl(228, 45%, 44%);
 }
@@ -121,6 +124,7 @@ h4 {
 /****** MEDIA QUERIES ******/
 
 @media screen and (min-width: 780px) {
+  /* GENERAL */
   body {
     background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
     background-position: top left, bottom right;
@@ -130,24 +134,26 @@ h4 {
     margin-top: 6.2rem;
     margin-bottom: 6.6666em;
   }
+  /* HERO */
   .hero {
     flex-direction: row;
     justify-content: space-between;
     text-align: left;
     margin-bottom: 3em;
   }
-  .hero p {
-    margin-top: .5em;
-  }
-  h1 {
-    font-size: 3em;
-    margin-bottom: 0;
-  }
   .hero-title {
     flex: 1;
     max-width: 430px;
     margin-right: 2em;
   }
+  h1 {
+    font-size: 3em;
+    margin-bottom: 0;
+  }
+  .hero p {
+    margin-top: .5em;
+  }
+  /* RATINGS */
   .hero-ratings {
     flex: 1;
     max-width: 540px;
@@ -167,6 +173,7 @@ h4 {
   }
 }
 @media screen and (min-width: 960px) {
+  /* RATING */
   .rating {
     width: 445px;
   }
@@ -176,6 +183,7 @@ h4 {
   .rating-bottom {
     align-self: end;
   }
+  /* BUYERS */
   .buyers {
     display: flex;
     flex-wrap: wrap;
