@@ -150,9 +150,6 @@ h4 {
     font-size: 3em;
     margin-bottom: 0;
   }
-  .hero p {
-    margin-top: .5em;
-  }
   /* RATINGS */
   .hero-ratings {
     flex: 1;
