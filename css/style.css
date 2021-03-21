@@ -10,6 +10,12 @@
 body {
   font-family: 'Spartan', sans-serif;
   font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url(../images/bg-pattern-top-mobile.svg), url(../images/bg-pattern-bottom-mobile.svg);
+  background-position: top left, bottom right;
+  background-repeat: no-repeat;
 }
 
 /****** TYPOGRAPHY AND LAYOUT ******/
@@ -46,14 +52,13 @@ h4 {
   text-align: center;
   margin-bottom: 3.25em;
 }
-
 .hero p {
   letter-spacing: -.5px;
   line-height: 1.65;
   color: var(--clr-neutral-dark-grayish-magenta);
 }
 .hero-ratings {
-  padding-top: 2.7em;
+  padding-top: 2.85em;
 }
 .rating {
   padding: 1em 0;
@@ -73,6 +78,9 @@ h4 {
 
 /* BUYERS SECTION */
 
+.buyers {
+  min-height: 300px;
+}
 .buyer-card {
   padding: 2em;
   padding-top: 2.7em;
@@ -113,18 +121,23 @@ h4 {
 /****** MEDIA QUERIES ******/
 
 @media screen and (min-width: 780px) {
+  body {
+    background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
+    background-position: top left, bottom right;
+    background-repeat: no-repeat;
+  } 
   .wrapper {
-    margin-top: 6.6666em;
+    margin-top: 6.2rem;
     margin-bottom: 6.6666em;
   }
   .hero {
     flex-direction: row;
     justify-content: space-between;
     text-align: left;
-    margin-bottom: 3.7em;
+    margin-bottom: 3em;
   }
   .hero p {
-    margin-top: .7em;
+    margin-top: .5em;
   }
   h1 {
     font-size: 3em;
@@ -145,17 +158,9 @@ h4 {
     display: flex;
     align-items: center;
     max-width: 445px;
-    padding-right: 2em;
-    padding-top: 1.5em;
-    padding-bottom: 1.1em;
+    padding: 1.5em 2em 1.1em 0;
     margin-top: 0;
     margin-bottom: 1em;
-  }
-  .rating-middle {
-    align-self: center;
-  }
-  .rating-bottom {
-    align-self: end;
   }
   .rating h3 {
     margin: 0;
@@ -165,15 +170,27 @@ h4 {
   .rating {
     width: 445px;
   }
+  .rating-middle {
+    align-self: center;
+  }
+  .rating-bottom {
+    align-self: end;
+  }
   .buyers {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    column-gap: 30px;
   }
   .buyer-card {
-    /* max-width: 350px; */
-    flex-basis: 350px;
+    flex-basis: 300px;
     flex-grow: 1;
+    height: 235px;
   }
-
+  .buyer-card.middle {
+    align-self: center;
+  }
+  .buyer-card.bottom {
+    align-self: flex-end;
+  }
 } 
